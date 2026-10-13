@@ -2,6 +2,8 @@
 
 using namespace std;
 
+#define mod 1000000007;
+
 int main () {
 
     int n;
@@ -23,7 +25,7 @@ int main () {
     for (int i=1; i <= x; i++) {
         int poss = 0;
         for(auto& d: denominations) {
-            poss += d <= i ? dp[i-d] : 0;
+            poss  = (poss + (d <= i ? dp[i-d] : 0)) % mod;
         }
         dp[i] = poss;
     }
