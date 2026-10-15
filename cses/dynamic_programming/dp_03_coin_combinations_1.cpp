@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define mod 1000000007;
+#define mod 1000000007
 
 int main () {
 
